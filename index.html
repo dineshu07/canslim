@@ -10,7 +10,7 @@
 <body>
     <script>
     $(document).ready(()=>{
-        $.ajax({url: "http://localhost:3000/getScripts", success: function(result){
+        $.ajax({url: "/getScripts", success: function(result){
             let scripts = JSON.parse(result);
             scripts.data.forEach(element => {
                 $("body").append('<iframe name="ChartImage" id="ChartImage" frameborder="0" width="100%" style="margin: 0px; float: left; clear: both; width: 1139px; height: 591px;" height="750" scrolling="no" src="http://chartink.com/raw/chartdisplay.php?v=o&amp;t=d&amp;E=1&amp;E2=1&amp;h=1&amp;l=0&amp;vg=1&amp;y=1&amp;s=0&amp;w=0&amp;c1=RSI%7E&amp;c2=14%7E&amp;a1=1&amp;a1t=c&amp;a1v=SMA&amp;a1l=21&amp;a2=1&amp;a2t=c&amp;a2v=SMA&amp;a2l=10&amp;a3l=15&amp;a4l=20&amp;a5l=28&amp;ti=1764&amp;d=w&amp;A='+element.nsecode+'&amp;width=1127&amp;is_premium=false&amp;user_id=185667"></iframe>')
